@@ -1,72 +1,128 @@
-html resume
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>R Mohamed Junaid | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
-    .hero { padding: 60px 0; background-color: #0d6efd; color: white; text-align: center; }
-    .section { padding: 40px 0; }
-    .pdf-viewer { height: 600px; width: 100%; border: none; }
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #0a0a0a;
+      color: #33ff00;
+    }
+    .hero {
+      padding: 100px 20px;
+      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+      text-align: center;
+      border-bottom: 2px solid #33ff00;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .btn-outline-light {
+      color: #33ff00;
+      border-color: #33ff00;
+    }
+    .btn-outline-light:hover {
+      background-color: #33ff00;
+      color: #000;
+    }
+    .section-heading {
+      border-left: 4px solid #33ff00;
+      padding-left: 10px;
+      margin-bottom: 30px;
+    }
+    .pdf-viewer {
+      height: 600px;
+      width: 100%;
+      border: 1px solid #33ff00;
+    }
+    a, a:hover {
+      color: #33ff00;
+    }
+    .terminal-card {
+      background-color: #111;
+      padding: 20px;
+      border: 1px solid #33ff00;
+      margin-bottom: 20px;
+    }
+    .cursor {
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 2px solid #33ff00;
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>R Mohamed Junaid</h1>
-    <p>Senior Security Engineer | SOC & Cloud Security Specialist</p>
-    <p><a href="mailto:Mohamedjunaid1234@gmail.com" class="text-white">Mohamedjunaid1234@gmail.com</a> | <a href="https://linkedin.com/in/mj-07" class="text-white">LinkedIn</a></p>
-  </header>
+  <div class="hero">
+    <h1 class="display-4">> R Mohamed Junaid<span class="cursor">_</span></h1>
+    CyberSecurity Professional
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <a href="mailto:Mohamedjunaid1234@gmail.com" class="btn btn-outline-light"><i class="bi bi-envelope-fill"></i> Email</a>
+      <a href="https://linkedin.com/in/mj-07" class="btn btn-outline-light"><i class="bi bi-linkedin"></i> LinkedIn</a>
+    </div>
 
-  <section class="container section">
-    <h2>About Me</h2>
-    <p>
-      With over 7 years of experience in security operations, incident response, and cloud security,
-      I specialize in building and scaling internal SOCs, leading detection engineering, and aligning with compliance standards like HIPAA, SOC2.
-      I am proficient with EDRs, SIEM tuning, and real-time threat detection.
-    </p>
-  </section>
+  </div>
 
-  <section class="container section">
-    <h2>Resume</h2>
-    <p><a href="SrSecEngJunaid.pdf" download class="btn btn-primary">Download Resume (PDF)</a></p>
+  <div class="container section">
+    <h2 class="section-heading">About Me</h2>
+    <div class="terminal-card">
+      <p> A decision maker and critical thinking professional with 7+ years of experience in SOC leadership, incident response, and cloud security. I build secure systems, enable real-time threat detection, and lead teams through complex incident handling across AWS, Azure, and GCP environments.</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2 class="section-heading">Resume</h2>
+    <div class="text-center mb-3">
+      <a href="SrSecEngJunaid.pdf" download class="btn btn-outline-light"><i class="bi bi-download"></i> Download PDF</a>
+    </div>
     <iframe class="pdf-viewer" src="SrSecEngJunaid.pdf"></iframe>
-  </section>
+  </div>
 
-  <section class="container section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>RedHat RHCSA & RHCE</li>
-      <li>Cisco Cloud Security Specialty, Cybersecurity Fundamentals</li>
-      <li>Splunk Fundamentals</li>
-      <li>Fortinet NSE - Network Security Engineer</li>
-      <li>AWS SAA-C02, AWS Security Specialty (Trained)</li>
-      <li>Security+ (Trained)</li>
-    </ul>
-  </section>
+  <div class="container section">
+    <h2 class="section-heading">Certifications</h2>
+    <div class="terminal-card">
+      <ul>
+        <li>RedHat Certified: RHCSA & RHCE</li>
+        <li>Cisco: Cloud Security, Cybersecurity Fundamentals</li>
+        <li>AWS Trained: SAA-C02, Security Specialty</li>
+        <li>Splunk Fundamentals, Fortinet NSE</li>
+        <li>CompTIA Security+ (Trained)</li>
+      </ul>
+    </div>
+  </div>
 
-  <section class="container section">
-    <h2>Skills</h2>
-    <ul>
-      <li>SIEM: Splunk, Sentinel, CrowdStrike Next-Gen SIEM</li>
-      <li>EDR/XDR: CrowdStrike, Defender, Cisco Secure Endpoint</li>
-      <li>Cloud: AWS, Azure, GCP, Kubernetes (AKS/EKS)</li>
-      <li>ZTNA: Zscaler</li>
-      <li>Scripting: Python, YAML, JSON</li>
-      <li>Frameworks: MITRE ATT&CK, NIST IR, Cyber Kill Chain</li>
-    </ul>
-  </section>
+  <div class="container section">
+    <h2 class="section-heading">Skills</h2>
+    <div class="terminal-card">
+      <ul>
+        <li><strong>SIEM:</strong> Splunk, Sentinel, CrowdStrike</li>
+        <li><strong>EDR/XDR:</strong> CrowdStrike, Defender, Cisco Secure Endpoint</li>
+        <li><strong>Cloud:</strong> AWS, Azure, GCP, Kubernetes</li>
+        <li><strong>Languages:</strong> Python, YAML, JSON</li>
+        <li><strong>Frameworks:</strong> MITRE ATT&CK, NIST IR, Cyber Kill Chain</li>
+      </ul>
+    </div>
+  
+  </div>
+  </div>
 
-  <section class="container section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:Mohamedjunaid1234@gmail.com">Mohamedjunaid1234@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/mj-07">linkedin.com/in/mj-07</a></p>
-  </section>
+  <footer>
+    <div class="container">
+      &copy; 2025 R Mohamed Junaid | Built with passion for security ⚡
+    </div>
+  </footer>
 
-  <footer class="text-center py-4 bg-light">&copy; 2025 R Mohamed Junaid</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
