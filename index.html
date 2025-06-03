@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>R Mohamed Junaid | Cybersecurity Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
   <style>
     body {
-      font-family: 'Fira Code', monospace;
-      background-color: #0a0a0a;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+    a {
       color: #33ff00;
+      text-decoration: none;
     }
     .hero {
-      padding: 100px 20px;
-      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+      height: 100vh;
+      background: linear-gradient(160deg, #0a0a0a, #1a1a1a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      border-bottom: 2px solid #33ff00;
-    }
-    .section {
-      padding: 60px 0;
-    }
-    .btn-outline-light {
       color: #33ff00;
-      border-color: #33ff00;
     }
-    .btn-outline-light:hover {
-      background-color: #33ff00;
-      color: #000;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero .typed-text {
+      font-size: 1.5rem;
+      font-family: monospace;
+    }
+    section {
+      padding: 60px 20px;
     }
     .section-heading {
-      border-left: 4px solid #33ff00;
-      padding-left: 10px;
+      border-left: 5px solid #33ff00;
+      padding-left: 12px;
       margin-bottom: 30px;
-    }
-    .pdf-viewer {
-      height: 600px;
-      width: 100%;
-      border: 1px solid #33ff00;
-    }
-    a, a:hover {
       color: #33ff00;
     }
     .terminal-card {
@@ -48,60 +49,50 @@
       padding: 20px;
       border: 1px solid #33ff00;
       margin-bottom: 20px;
+      border-radius: 8px;
     }
-    .cursor {
-      animation: blink 1s steps(1) infinite;
+    .btn-outline-light {
+      border-color: #33ff00;
+      color: #33ff00;
     }
-    @keyframes blink {
-      50% { opacity: 0; }
+    .btn-outline-light:hover {
+      background-color: #33ff00;
+      color: #000;
     }
     footer {
-      padding: 30px 0;
       text-align: center;
-      border-top: 2px solid #33ff00;
+      padding: 30px;
+      border-top: 1px solid #33ff00;
+      color: #33ff00;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1 class="display-4">> R Mohamed Junaid<span class="cursor">_</span></h1>
-    CyberSecurity Professional
-    <div class="d-flex justify-content-center gap-3 mt-3">
-      <a href="mailto:Mohamedjunaid1234@gmail.com" class="btn btn-outline-light"><i class="bi bi-envelope-fill"></i> Email</a>
-      <a href="https://linkedin.com/in/mj-07" class="btn btn-outline-light"><i class="bi bi-linkedin"></i> LinkedIn</a>
-    </div>
 
+  <!-- Hero -->
+  <div class="hero" id="home">
+    <div>
+      <h1>R Mohamed Junaid</h1>
+      <div class="typed-text" id="typed-text">CyberSecurity Professional</div>
+      <div class="mt-4">
+        <a href="mailto:Mohamedjunaid1234@gmail.com" class="btn btn-outline-light me-2">📧 Email</a>
+        <a href="https://linkedin.com/in/mj-07" class="btn btn-outline-light">🔗 LinkedIn</a>
+      </div>
+    </div>
   </div>
 
-  <div class="container section">
+  <!-- About -->
+  <section id="about" class="container">
     <h2 class="section-heading">About Me</h2>
     <div class="terminal-card">
-      <p> A decision maker and critical thinking professional with 7+ years of experience in SOC leadership, incident response, and cloud security. I build secure systems, enable real-time threat detection, and lead teams through complex incident handling across AWS, Azure, and GCP environments.</p>
+      <p>
+        A decision maker and critical thinking professional with 7+ years of experience in SOC leadership, incident response, and cloud security. I build secure systems, enable real-time threat detection, and lead teams through complex incident handling across AWS, Azure, and GCP environments.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="container section">
-    <h2 class="section-heading">Resume</h2>
-    <div class="text-center mb-3">
-      <a href="SrSecEngJunaid.pdf" download class="btn btn-outline-light"><i class="bi bi-download"></i> Download PDF</a>
-    </div>
-    <iframe class="pdf-viewer" src="SrSecEngJunaid.pdf"></iframe>
-  </div>
-
-  <div class="container section">
-    <h2 class="section-heading">Certifications</h2>
-    <div class="terminal-card">
-      <ul>
-        <li>RedHat Certified: RHCSA & RHCE</li>
-        <li>Cisco: Cloud Security, Cybersecurity Fundamentals</li>
-        <li>AWS Trained: SAA-C02, Security Specialty</li>
-        <li>Splunk Fundamentals, Fortinet NSE</li>
-        <li>CompTIA Security+ (Trained)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container section">
+  <!-- Skills -->
+  <section id="skills" class="container">
     <h2 class="section-heading">Skills</h2>
     <div class="terminal-card">
       <ul>
@@ -112,17 +103,84 @@
         <li><strong>Frameworks:</strong> MITRE ATT&CK, NIST IR, Cyber Kill Chain</li>
       </ul>
     </div>
-  
-  </div>
-  </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      &copy; 2025 R Mohamed Junaid | Built with passion for security ⚡
+  <!-- Certifications -->
+  <section id="certifications" class="container">
+    <h2 class="section-heading">Certifications</h2>
+    <div class="terminal-card">
+      <ul>
+        <li>RedHat Certified: RHCSA & RHCE</li>
+        <li>Cisco: Cloud Security, Cybersecurity Fundamentals</li>
+        <li>AWS Trained: SAA-C02, Security Specialty</li>
+        <li>Splunk Fundamentals, Fortinet NSE</li>
+        <li>CompTIA Security+ (Trained)</li>
+      </ul>
     </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="container">
+    <h2 class="section-heading">Resume</h2>
+    <div class="text-center mb-3">
+      <a href="SrSecEngJunaid.pdf" download class="btn btn-outline-light">⬇️ Download PDF</a>
+    </div>
+    <iframe src="SrSecEngJunaid.pdf" width="100%" height="600px" style="border:1px solid #33ff00;"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 R Mohamed Junaid | Built with passion for security ⚡
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Typed JS -->
+  <script>
+    const typedText = document.getElementById('typed-text');
+    const phrases = ['CyberSecurity Professional', 'SOC Lead & IR Expert', 'Cloud Security Engineer'];
+    let i = 0;
+    let j = 0;
+    let currentPhrase = [];
+    let isDeleting = false;
+    let isEnd = false;
+
+    function loop() {
+      isEnd = false;
+      typedText.innerHTML = currentPhrase.join('');
+
+      if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+          currentPhrase.push(phrases[i][j]);
+          j++;
+          typedText.innerHTML = currentPhrase.join('');
+        }
+
+        if (isDeleting && j <= phrases[i].length) {
+          currentPhrase.pop(phrases[i][j]);
+          j--;
+          typedText.innerHTML = currentPhrase.join('');
+        }
+
+        if (j == phrases[i].length) {
+          isEnd = true;
+          isDeleting = true;
+        }
+
+        if (isDeleting && j === 0) {
+          currentPhrase = [];
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) {
+            i = 0;
+          }
+        }
+      }
+      const spedUp = Math.random() * (80 - 50) + 50;
+      const normalSpeed = Math.random() * (150 - 100) + 100;
+      const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+      setTimeout(loop, time);
+    }
+
+    loop();
+  </script>
 </body>
 </html>
-
