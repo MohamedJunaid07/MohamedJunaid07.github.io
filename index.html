@@ -8,13 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    @keyframes zoomInFromFar {
+   @keyframes zoomInOnce {
   0% {
     transform: scale(0.2);
     opacity: 0;
   }
-  50% {
-    opacity: 0.4;
+  60% {
+    opacity: 1;
   }
   100% {
     transform: scale(1);
@@ -22,9 +22,29 @@
   }
 }
 
-.zoom-title {
-  animation: zoomInFromFar 2.5s ease-out forwards;
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.zoom-once {
+  animation: zoomInOnce 2.5s ease-out forwards;
+  transform-origin: center;
+  display: inline-block;
+}
+
+.subtitle-fade {
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 2.6s forwards;
+  display: inline-block;
+}
+
     html, body {
       margin: 0;
       padding: 0;
@@ -135,8 +155,8 @@
   <div class="hero">
     <canvas id="matrix-canvas"></canvas>
     <div class="hero-content">
-      <h1 class="display-4 fw-bold zoom-title">R Mohamed Junaid</h1>
-      <h4>CyberSecurity Professional</h4>
+    <h1 class="display-4 fw-bold zoom-once">R Mohamed Junaid</h1>
+<h4 class="subtitle-fade">CyberSecurity Professional</h4>
       <div class="mt-4">
         <a href="mailto:Mohamedjunaid1234@gmail.com" class="btn btn-outline-light me-2">📧 Email</a>
         <a href="https://linkedin.com/in/mj-07" class="btn btn-outline-light">🔗 LinkedIn</a>
