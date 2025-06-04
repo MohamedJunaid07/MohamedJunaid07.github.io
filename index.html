@@ -8,6 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
+    @keyframes zoomInFromFar {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-title {
+  animation: zoomInFromFar 2.5s ease-out forwards;
+}
     html, body {
       margin: 0;
       padding: 0;
@@ -118,7 +135,7 @@
   <div class="hero">
     <canvas id="matrix-canvas"></canvas>
     <div class="hero-content">
-      <h1 class="display-4 fw-bold">R Mohamed Junaid</h1>
+      <h1 class="display-4 fw-bold zoom-title">R Mohamed Junaid</h1>
       <h4>CyberSecurity Professional</h4>
       <div class="mt-4">
         <a href="mailto:Mohamedjunaid1234@gmail.com" class="btn btn-outline-light me-2">📧 Email</a>
